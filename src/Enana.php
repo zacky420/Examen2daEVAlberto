@@ -23,8 +23,11 @@ class Enana
         if ($this->puntosVida <= 0) {
             $this->puntosVida = 0;
             $this->situacion = "muerta";
+        } elseif ($this->puntosVida > 0 && $this->situacion === "muerta") {
+            $this->situacion = "viva";
         }
     }
+    
     public function heridaGrave(){
         #Se le quita toda la vida que posea hasta tener 0 puntos de vida y cambiarle la situacion a limbo
         $this->situacion="limbo";

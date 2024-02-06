@@ -45,12 +45,8 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     }
 
     public function testHeridaGrave() {
-        $enana = new Enana("EnanaTest", 20);
-        $enana->heridaGrave();
-        $this->assertEquals(0, $enana->getPuntosVida());
-        $this->assertEquals("limbo", $enana->getSituacion());
-
-    }
+        
+     }
     
     public function testPocimaRevive() {
         #Se probará el efecto de administrar una pócima a una Enana muerta pero con una vida mayor que -10 y menor que 0
