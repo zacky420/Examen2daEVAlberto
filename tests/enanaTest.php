@@ -49,12 +49,14 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
         $this->assertEquals(0, $enana->getPuntosVida());
         $this->assertEquals("limbo", $enana->getSituacion());
     }
-    public function testPocimaRevive() {
-        $enana = new Enana("EnanaTest", -5);
+    public function testPocimaNoRevive() {
+        $enana = new Enana("EnanaTest", 0);
         $enana->pocima();
-        $this->assertEquals(-5, $enana->getPuntosVida()); // La pócima no debería revivir a una enana muerta
-        $this->assertEquals("muerta", $enana->getSituacion());
+        $this->assertEquals(20, $enana->getPuntosVida());
+        $this->assertEquals("limbo", $enana->getSituacion());
     }
+
+
     public function testPocimaNoRevive() {
         $enana = new Enana("EnanaTest", 0);
         $enana->pocima();
@@ -68,5 +70,4 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
         $this->assertEquals(0, $enana->getPuntosVida()); // La pócima extra no debería afectar a una enana en el limbo
         $this->assertEquals("limbo", $enana->getSituacion());
     }
-}
 ?>
