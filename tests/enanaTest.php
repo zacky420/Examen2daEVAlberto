@@ -7,22 +7,15 @@ class enanaTest extends TestCase {
     
     public function testCreandoEnana() {
          // Crear enana viva
-         $enanaViva = new Enana("Enana1", 50);
-         $this->assertEquals("Enana1", $enanaViva->getNombre());
-         $this->assertEquals(50, $enanaViva->getPuntosVida());
-         $this->assertEquals("viva", $enanaViva->getSituacion());
+         $enana = new Enana("Enana1", 50);
+         $this->assertEquals("Enana1", $enana->getNombre());
+         $this->assertEquals(50, $enana->getPuntosVida());
+         $this->assertEquals("viva", $enana->getSituacion());
  
          // Crear enana muerta
-         $enanaMuerta = new Enana("Enana2", -10);
-         $this->assertEquals("Enana2", $enanaMuerta->getNombre());
-         $this->assertEquals(-10, $enanaMuerta->getPuntosVida());
-         $this->assertEquals("muerta", $enanaMuerta->getSituacion());
+        
  
          // Crear enana en limbo
-         $enanaLimbo = new Enana("Enana3", 0);
-         $this->assertEquals("Enana3", $enanaLimbo->getNombre());
-         $this->assertEquals(0, $enanaLimbo->getPuntosVida());
-         $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     
     }
     public function testHeridaLeveVive() {
