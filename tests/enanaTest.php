@@ -27,8 +27,17 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     
     }
     public function testHeridaLeveVive() {
-        #Se probará el efecto de una herida leve a una Enana con puntos de vida suficientes para sobrevivir al ataque
-        #Se tendrá que probar que la vida es mayor que 0 y además que su situación es viva
+        // Crear enana con suficientes puntos de vida
+    $enana = new Enana("EnanaTest", 20);
+
+    // Aplicar herida leve
+    $enana->heridaLeve();
+
+    // Verificar que la vida es mayor que 0
+    $this->assertGreaterThan(0, $enana->getPuntosVida());
+
+    // Verificar que la situación es "viva"
+    $this->assertEquals("viva", $enana->getSituacion());
 
     }
 
