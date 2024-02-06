@@ -11,9 +11,9 @@ class Enana
     {
         #El constructor tiene tan solo 2 parámetros. No añadas más.
         #Deberás de completar situación dependiendo de puntosVida.
-        $this->nombre=$a1;
-        $this->puntosVida=$a2;
-        $this->situacion="muerta";
+        $this->nombre = $a1;
+    $this->puntosVida = $a2;
+    $this->situacion = ($a2 > 0) ? "viva" : "muerta";
     }
 
     public function heridaLeve(){
