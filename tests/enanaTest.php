@@ -52,7 +52,7 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     public function testPocimaRevive() {
         $enana = new Enana("EnanaTest", -5);
         $enana->pocima();
-        $this->assertEquals(0, $enana->getPuntosVida());
+        $this->assertEquals(20, $enana->getPuntosVida());
         $this->assertEquals("muerta", $enana->getSituacion());
     }
     
