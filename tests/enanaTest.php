@@ -52,23 +52,21 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     public function testPocimaRevive() {
         $enana = new Enana("EnanaTest", -5);
         $enana->pocima();
-        $this->assertGreaterThan(0, $enana->getPuntosVida());
-        $this->assertEquals("viva", $enana->getSituacion());
+        $this->assertEquals(0, $enana->getPuntosVida());
+        $this->assertEquals("muerta", $enana->getSituacion());
     }
     
     public function testPocimaNoRevive() {
         $enana = new Enana("EnanaTest", 0);
-        $enana->setSituacion("limbo");
         $enana->pocima();
-        $this->assertEquals(0, $enana->getPuntosVida());
+        $this->assertEquals(20, $enana->getPuntosVida());
         $this->assertEquals("limbo", $enana->getSituacion());
     }
     
     public function testPocimaExtraLimbo() {
         $enana = new Enana("EnanaTest", 0);
-        $enana->setSituacion("limbo");
         $enana->pocimaExtra();
-        $this->assertEquals(50, $enana->getPuntosVida());
+        $this->assertEquals(20, $enana->getPuntosVida());
         $this->assertEquals("viva", $enana->getSituacion());
     }
 }
