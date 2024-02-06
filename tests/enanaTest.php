@@ -67,4 +67,5 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
     } */
 
 }
+}
 ?>
