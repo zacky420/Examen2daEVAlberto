@@ -70,4 +70,6 @@ $this->assertEquals("limbo", $enanaLimbo->getSituacion());
         $this->assertEquals(0, $enana->getPuntosVida()); // La pócima extra no debería afectar a una enana en el limbo
         $this->assertEquals("limbo", $enana->getSituacion());
     }
+
+}
 ?>
