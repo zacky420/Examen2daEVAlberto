@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 include './src/Enana.php';
 
-class EnanaTest extends TestCase {
+class enanaTest extends TestCase {
     
     public function testCreandoEnana() {
          // Crear enana viva
