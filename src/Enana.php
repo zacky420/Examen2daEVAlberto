@@ -24,10 +24,7 @@ class Enana
             $this->puntosVida = 0;
             $this->situacion = "muerta";
         }
-        
-        if ($this->situacion === "muerta") {
-            $this->situacion = "viva";
-        }
+        // Eliminamos la condición $this->situacion === "muerta"
     }
 
     public function heridaGrave(){
