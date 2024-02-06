@@ -23,9 +23,9 @@ class Enana
         if ($this->puntosVida <= 0) {
             $this->puntosVida = 0;
             $this->situacion = "muerta";
-        }
-    
-        if ($this->puntosVida > 0 && $this->situacion === "muerta") {
+        } elseif ($this->puntosVida > 0 && $this->situacion === "muerta") {
+            $this->situacion = "viva";
+        } elseif ($this->puntosVida > 0 && $this->situacion === "limbo") {
             $this->situacion = "viva";
         }
     }
